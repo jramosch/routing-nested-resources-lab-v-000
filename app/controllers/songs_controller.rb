@@ -1,7 +1,10 @@
 class SongsController < ApplicationController
   def index
-    if 
-
+    if params[:artist_id]
+      artist = Artist.find_or_initialize_by(params[:artist_id])
+      if artist.new_record?
+        @songs = artist.songs
+      end
     else
       redirect_to 'artists/index'
     end
