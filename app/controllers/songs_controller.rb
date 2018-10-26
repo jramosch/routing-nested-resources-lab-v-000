@@ -7,9 +7,7 @@ class SongsController < ApplicationController
       else
         redirect_to 'artists/index'
       end
-    else
     end
-
   end
 
   def show
