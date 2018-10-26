@@ -5,7 +5,7 @@ class SongsController < ApplicationController
       if artist.new_record?
         @songs = artist.songs
       else
-        redirect_to 'artists/index'
+        redirect_to artists_path
       end
     else
       @songs = Song.all
